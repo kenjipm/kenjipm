@@ -34,12 +34,12 @@
 	</head>
 	<body class="d-flex flex-column">
 		<div id="page-content" class="container-fluid d-flex flex-column">
-			<div id="kpm-header" class="pt-2 text-white mb-4">
+			<div id="kpm-header" class="pt-3 text-white mb-4">
 				<div class="text-right text-bottom pr-4">
 					<h1>Hi! I'm Kenji!</h1>
 					<h2>and welcome to my site</h2>
 				</div>
-				<nav id="kpm-nav" class="pt-4 nav justify-content-center font-weight-bold">
+				<nav id="kpm-nav" class="pt-5 nav justify-content-center font-weight-bold">
 					<a class="nav-link text-decoration-none text-white" href="/thought/"><h2><small>Thoughts</small></h2></a>
 					<span class="nav-link"><h2><small></small></h2></span>
 					<a class="nav-link text-decoration-none text-white" href="/"><h2><small>Guitar Tab</small></h2></a>

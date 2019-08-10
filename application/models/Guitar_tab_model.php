@@ -8,6 +8,7 @@ class Guitar_tab_model extends CI_Model {
 	public $id;
 	public $title;
 	public $content;
+	public $video_embed_html;
 	public $is_deleted;
 
 	public function find_all()

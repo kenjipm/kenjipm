@@ -14,7 +14,7 @@ function bind_guitar_tab_link() {
 		scrollTo('#guitar_tab_title');
 		var guitar_tab_id = $(this).attr('item_id');
 		$('#guitar_tab_title').html(ajax_loader);
-		$('#guitar_tab_content').css('opacity', '0');
+		$('#guitar_tab_content, #guitar_tab_video_embed_html').css('opacity', '0');
 		
 		$.ajax({
 			url: '/home/get_guitar_tab_detail/',
@@ -24,10 +24,11 @@ function bind_guitar_tab_link() {
 			},
 			success: function(response) {
 				if (response.status == "success") {
-					$("#guitar_tab_title").html(response.data.title);
+					$('#guitar_tab_title').html(response.data.title);
 					var rendered_content = response.data.content.replace(/\n/g, "<br />");
-					$("#guitar_tab_content").html(rendered_content);
-					$('#guitar_tab_content').animate({
+					$('#guitar_tab_content').html(rendered_content);
+					$('#guitar_tab_video_embed_html').html(response.data.video_embed_html);
+					$('#guitar_tab_content, #guitar_tab_video_embed_html').animate({
 						opacity: 1
 					}, 1000);
 				} else {
