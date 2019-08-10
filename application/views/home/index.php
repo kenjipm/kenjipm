@@ -1,4 +1,4 @@
-<div class="col-12 col-md-4 col-xl-3">
+<div class="col-12 col-lg-4 col-xl-3">
 	<h3 class="text-center">Tabs</h3>
 	<nav class="list-group list-group-flush">
 		<?php
@@ -11,7 +11,7 @@
 		?>
 	</nav>	
 </div>
-<div class="col-12 col-md-8 col-xl-9">
+<div class="col-12 col-lg-8 col-xl-9">
 	<h3 id="guitar_tab_title"></h3>
 	<div id="guitar_tab_video_embed_html"></div>
 	<pre id="guitar_tab_content"></pre>
