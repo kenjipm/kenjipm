@@ -57,7 +57,7 @@
 				<img src="/img/portfolio/this.png" class="card-img-top kpm-card-img" alt="This Website">
 				<div class="card-body">
 					<h5 class="card-title">This Website</h5>
-					<p class="card-text">And yes, of course, this is a website I built. First released after 12 work hours.</p>
+					<p class="card-text">And yes, of course, this is a website I built. First released after 12 hours worked.</p>
 				</div>
 			</div>
 			<div class="card invisible">
