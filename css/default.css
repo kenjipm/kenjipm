@@ -1,0 +1,34 @@
+#page-content {
+	flex: 1 0 auto;
+	padding-right: 0;
+	padding-left: 0;
+}
+
+#kpm-header {
+	background-image: url('/img/cover.png');
+	background-position: center;
+	background-size: cover;
+}
+
+#kpm-body {
+	flex: 1;
+	margin-right: 0;
+	margin-left: 0;
+}
+
+#kpm-footer {
+	flex-shrink: none;
+	margin-top: 20px;
+}
+
+#kpm-nav {
+	background: linear-gradient(to top, rgba(0,0,0,1), 70%, rgba(0,0,0,0));
+}
+
+#kpm-nav .nav-link:hover {
+	opacity: 0.8;
+}
+
+.list-group-item-action {
+	cursor: pointer;
+}
