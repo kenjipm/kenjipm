@@ -29,6 +29,11 @@
 	opacity: 0.8;
 }
 
+#kpm-card-img {
+	height: 300px;
+	object-fit: cover;
+}
+
 .list-group-item-action {
 	cursor: pointer;
 }
