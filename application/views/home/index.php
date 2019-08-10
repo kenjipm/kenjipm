@@ -14,5 +14,5 @@
 <div class="col-12 col-md-8 col-xl-9">
 	<h3 id="guitar_tab_title"></h3>
 	<div id="guitar_tab_video_embed_html"></div>
-	<div id="guitar_tab_content" class="text-nowrap text-monospace"></div>
+	<pre id="guitar_tab_content"></pre>
 </div>
