@@ -16,7 +16,7 @@
 					<p class="card-text">BlackJack Vaporizer is a vaporizer store established in 2014. Still operating until now.</p>
 				</div>
 			</div>
-			<div class="card">
+			<div class="card invisible">
 			</div>
 		</div>
 		<br/>
@@ -44,6 +44,7 @@
 				</div>
 			</div>
 		</div>
+		<br/>
 		<div class="card-deck">
 			<div class="card">
 				<img src="/img/portfolio/tsis.png" class="card-img-top kpm-card-img" alt="TSIS Pertamina">
@@ -59,7 +60,7 @@
 					<p class="card-text">And yes, of course, this is a website I built. First released after 12 work hours.</p>
 				</div>
 			</div>
-			<div class="card">
+			<div class="card invisible">
 			</div>
 		</div>
 	</div>
