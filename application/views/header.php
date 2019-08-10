@@ -6,6 +6,18 @@
 		<link rel="stylesheet" type="text/css" href="/css/fa/css/all.css"/>
 		<script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
 		<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-129727756-2"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-129727756-2');
+		</script>
+		
+		<!-- Google AdSense -->
 		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 		<script>
 		  (adsbygoogle = window.adsbygoogle || []).push({
