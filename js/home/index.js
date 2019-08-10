@@ -25,7 +25,7 @@ function bind_guitar_tab_link() {
 			success: function(response) {
 				if (response.status == "success") {
 					$('#guitar_tab_title').html(response.data.title);
-					var rendered_content = "<pre>" + response.data.content.replace(/\n/g, "</pre><pre>") + "</pre>";
+					var rendered_content = '<pre class="mb-0">' + response.data.content.replace(/\n/g, '</pre><pre class="mb-0">') + '&nbsp;</pre>';
 					$('#guitar_tab_content').html(rendered_content);
 					$('#guitar_tab_video_embed_html').html(response.data.video_embed_html);
 					$('#guitar_tab_content, #guitar_tab_video_embed_html').animate({
