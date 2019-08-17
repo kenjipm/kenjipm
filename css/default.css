@@ -37,3 +37,19 @@
 .list-group-item-action {
 	cursor: pointer;
 }
+
+.longread {
+	font-size: 140%;
+}
+
+.longread-title {
+	
+}
+
+.longread-subtitle {
+	color: rgba(0,0,0,.5);
+}
+
+.longread-content {
+	
+}

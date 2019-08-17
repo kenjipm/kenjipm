@@ -1,5 +1,5 @@
 <div class="col-12">
-	<div class="container-fluid">
+	<div class="container longread">
 		<p><h3>Hi, I'm Kenji Prahyudi!</h3></p>
 		<p>There's so much to tell yet too random to write...</p>
 		<p>I'm a full-time programmer, a music lover, and a hardcore thinker. I like philoshophy, psychology, cat, basically anything that move us closer to reality.</p>

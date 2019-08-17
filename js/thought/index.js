@@ -14,7 +14,7 @@ function bind_thought_link() {
 		scrollTo('#thought_title');
 		var thought_id = $(this).attr('item_id');
 		$('#thought_title').html(ajax_loader);
-		$('#thought_content, #thought_date').css('opacity', '0');
+		$('#thought_content, #thought_created_date').css('opacity', '0');
 		
 		$.ajax({
 			url: 'get_thought_detail/',
@@ -25,10 +25,10 @@ function bind_thought_link() {
 			success: function(response) {
 				if (response.status == "success") {
 					$("#thought_title").html(response.data.title);
-					$("#thought_date").html(response.data.created_date);
+					$("#thought_created_date").html(response.data.created_date_str);
 					var rendered_content = response.data.content.replace(/\n/g, "<br />");
 					$("#thought_content").html(rendered_content);
-					$('#thought_content, #thought_date').animate({
+					$('#thought_content, #thought_created_date').animate({
 						opacity: 1
 					}, 1000);
 				} else {
