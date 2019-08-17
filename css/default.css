@@ -5,7 +5,7 @@
 }
 
 #kpm-header {
-	background-image: url('/img/cover.png');
+	background-image: url('../img/cover.png');
 	background-position: center;
 	background-size: cover;
 }

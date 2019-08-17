@@ -17,7 +17,7 @@ function bind_guitar_tab_link() {
 		$('#guitar_tab_content, #guitar_tab_video_embed_html').css('opacity', '0');
 		
 		$.ajax({
-			url: '/home/get_guitar_tab_detail/',
+			url: 'home/get_guitar_tab_detail/',
 			method: 'POST',
 			data: {
 				id: guitar_tab_id

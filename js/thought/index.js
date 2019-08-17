@@ -17,7 +17,7 @@ function bind_thought_link() {
 		$('#thought_content, #thought_date').css('opacity', '0');
 		
 		$.ajax({
-			url: '/thought/get_thought_detail/',
+			url: 'get_thought_detail/',
 			method: 'POST',
 			data: {
 				id: thought_id
