@@ -14,7 +14,7 @@
 <div class="col-12 col-lg-8 col-xl-7">
 	<div class="longread">
 		<h3 id="thought_title" class="longread-title"></h3>
-		<h4><small id="thought_created_date" class="longread-subtitle"></small></h4>
+		<h4 id="thought_posted_on"><small class="longread-subtitle">Date posted: <span id="thought_created_date"></span></small></h4>
 		<div id="thought_content" class="longread-content"></div>
 	</div>
 </div>

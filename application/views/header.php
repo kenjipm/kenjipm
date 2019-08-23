@@ -5,6 +5,7 @@
 		<link rel="stylesheet" type="text/css" href="<?=base_url('css/bootstrap.min.css')?>"/>
 		<link rel="stylesheet" type="text/css" href="<?=base_url('css/fa/css/all.css')?>"/>
 		<script type="text/javascript" src="<?=base_url('js/jquery-3.4.1.min.js')?>"></script>
+		<script type="text/javascript" src="<?=base_url('js/popper.min.js')?>"></script>
 		<script type="text/javascript" src="<?=base_url('js/bootstrap.min.js')?>"></script>
 		
 		<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -34,7 +35,7 @@
 	</head>
 	<body class="d-flex flex-column">
 		<div id="page-content" class="container-fluid d-flex flex-column">
-			<div id="kpm-header" class="pt-3 text-white mb-4">
+			<div id="kpm-header" class="pt-3 text-white">
 				<div class="text-right text-bottom pr-4">
 					<h1>Hi! I'm Kenji!</h1>
 					<h2>and welcome to my site</h2>
@@ -51,4 +52,4 @@
 					<a class="nav-link text-decoration-none text-white" href="<?=base_url('/about/')?>"><h2><small>About Me</small></h2></a>
 				</nav>
 			</div>
-			<div id="kpm-body" class="row">
+			<div id="kpm-body" class="row pt-4">
