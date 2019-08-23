@@ -22,7 +22,7 @@ class Home extends CI_Controller {
 	{
 		// header
 		$data_header['page_title'] = "Kenji Prahyudi";
-		$data_header['js_list'] = ['home/index'];
+		$data_header['js_list'] = ['home/index', 'jquery.fittext'];
 		$data_header['css_list'] = ['home/index'];
 		
 		$this->load->view('header', $data_header);

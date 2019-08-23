@@ -7,6 +7,7 @@ function init_element() {
 	bind_btn_autoscroll();
 	
 	$('#autoscroll_help').tooltip();
+	$('#guitar_tab_content').fitText(7.5);
 }
 
 function bind_guitar_tab_link() {
