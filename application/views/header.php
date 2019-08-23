@@ -28,6 +28,13 @@
 		</script>
 		
 		<link rel="stylesheet" type="text/css" href="<?=base_url('css/default.css')?>"/>
+		<?php
+			if ($_SERVER['SERVER_NAME'] != "localhost") {
+				?>
+				<script type="text/javascript" src="<?=base_url('js/serviceworker.js')?>"></script>
+				<?php
+			}
+		?>
 		<script type="text/javascript" src="<?=base_url('js/default.js')?>"></script>
 		<?php if (isset($js_list)) { foreach ($js_list as $js) { ?> <script type="text/javascript" src="<?=base_url('js/'.$js.'.js')?>"></script> <?php } } ?>
 		<?php if (isset($css_list)) { foreach ($css_list as $css) { ?> <link rel="stylesheet" type="text/css" href="<?=base_url('css/'.$css.'.css')?>"/> <?php } } ?>
