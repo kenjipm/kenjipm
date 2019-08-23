@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<meta charset='utf-8'>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimal-ui">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes, minimal-ui">
 		<meta name="mobile-web-app-capable" content="yes">
 		<meta name="theme-color" content="#E0E0E0">
 		<title><?=$page_title?></title>
