@@ -18,7 +18,7 @@ function bind_guitar_tab_link() {
 		$('.list-group-item').removeClass('active');
 		$(this).addClass('active');
 		
-		scrollTo('#kpm-body');
+		scrollTo('#guitar_tab_title');
 		
 		var guitar_tab_id = $(this).attr('item_id');
 		$('#guitar_tab_title').html(ajax_loader);

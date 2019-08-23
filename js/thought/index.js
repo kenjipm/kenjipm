@@ -13,7 +13,7 @@ function bind_thought_link() {
 		$('.list-group-item').removeClass('active');
 		$(this).addClass('active');
 		
-		scrollTo('#kpm-body');
+		scrollTo('#thought_title');
 		
 		var thought_id = $(this).attr('item_id');
 		$('#thought_title').html(ajax_loader);
