@@ -47,7 +47,15 @@
 	</div>
 	<h3 id="guitar_tab_title">Write your own tab / chord below!</h3>
 	<div id="guitar_tab_video_embed_html"></div>
-	<pre id="guitar_tab_content" contenteditable="true"></pre>
+	<pre id="guitar_tab_content" contenteditable="true"><?=
+		"Feel free to publish your own tab / chord here by replacing this text with yours. Please be responsible and always check twice before you publish.<br/>".
+		"Once your guitar tab / chord been published:<br/>".
+		"<ul>".
+			"<li>You CANNOT edit / delete it.</li>".
+			"<li>It will be available for everyone and I don't responsible for anything happens afterward.</li>".
+		"</ul>".
+		"Please contact me if you need further questions / assistance."
+	?></pre>
 	<input type="button" id="btn_publish_tab_modal" value="Publish" class="btn btn-secondary" data-toggle="modal" data-target="#publish_tab_modal"/>
 </div>
 <div class="modal" tabindex="-1" role="dialog" id="publish_tab_modal">
@@ -61,6 +69,10 @@
 			</div>
 			<div class="modal-body">
 				<form>
+					<div class="form-group">
+						<label for="user_email">Your Email Address</label>
+						<input type="text" id="user_email" class="form-control"/>
+					</div>
 					<div class="form-group">
 						<label for="new_guitar_tab_title">Title</label>
 						<input type="text" id="new_guitar_tab_title" class="form-control"/>

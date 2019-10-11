@@ -10,6 +10,7 @@ class Guitar_tab_model extends CI_Model {
 	public $content;
 	public $duration;
 	public $video_embed_html;
+	public $email;
 	public $is_user_posted;
 	public $is_deleted;
 
@@ -20,6 +21,8 @@ class Guitar_tab_model extends CI_Model {
 		$this->content = $db_object->content;
 		$this->duration = $db_object->duration;
 		$this->video_embed_html = $db_object->video_embed_html;
+		$this->email = $db_object->email;
+		$this->is_user_posted = $db_object->is_user_posted;
 		$this->is_deleted = $db_object->is_deleted;
 	}
 	
@@ -46,6 +49,7 @@ class Guitar_tab_model extends CI_Model {
 			'title' => $_POST['guitar_tab_title'],
 			'content' => $_POST['guitar_tab_content'],
 			'duration' => $_POST['guitar_tab_duration'],
+			'email' => $_POST['user_email'],
 			'is_user_posted' => 1
 		);
 

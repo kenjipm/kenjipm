@@ -96,6 +96,30 @@ class Home extends CI_Controller {
 			$this->load->model('guitar_tab_model');
 			$this->guitar_tab_model->insert_from_post();
 			
+			// send email to me
+			$this->load->library('email');
+			
+			$config = array(
+				'protocol' => 'smtp',
+				'smtp_host' => 'ssl://mail.kenjipm.site',
+				'smtp_port' => 465,
+				'smtp_timeout' => 5,
+				'smtp_user' => 'noreply@kenjipm.site',
+				'smtp_pass' => 'D6Zz2RurHv4zz5T',
+				'mail_type' => 'html',
+				'wordwrap' => true,
+			);
+
+			$this->email->initialize($config);
+			$this->email->set_newline("\r\n");
+			
+			$this->email->from('noreply@kenjipm.site', 'Kenjipm Site');
+			$this->email->to('kenji.prahyudi@gmail.com');
+			$this->email->subject('Someone posted guitar tab on your site');
+			$this->email->message('Posted guitar tab title: '.$_POST['guitar_tab_title']);
+
+			$this->email->send();
+			
 			$response['status'] = 'success';
 		}
 		else

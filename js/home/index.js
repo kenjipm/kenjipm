@@ -61,6 +61,7 @@ function bind_btn_publish_tab_modal() {
 
 function bind_btn_publish_tab() {
 	$('#btn_publish_tab').on('click', function(e){
+		var user_email = $('#user_email').val();
 		var new_guitar_tab_title = $('#new_guitar_tab_title').val();
 		var new_guitar_tab_duration = $('#new_guitar_tab_duration').val();
 		var guitar_tab_content = $('#guitar_tab_content').html();
@@ -69,6 +70,7 @@ function bind_btn_publish_tab() {
 			url: 'home/save_guitar_tab/',
 			method: 'POST',
 			data: {
+				user_email: user_email,
 				guitar_tab_title: new_guitar_tab_title,
 				guitar_tab_duration: new_guitar_tab_duration,
 				guitar_tab_content: guitar_tab_content,
