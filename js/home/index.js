@@ -11,7 +11,7 @@ function init_element() {
 }
 
 function bind_guitar_tab_link() {
-	$('#guitar_tab_content, #guitar_tab_video_embed_html, #guitar_tab_control').css('opacity', '0');
+	// $('#guitar_tab_content, #guitar_tab_video_embed_html, #guitar_tab_control').css('opacity', '0');
 		
 	$('.guitar_tab_link').on('click', function(e){
 		stop_scroll_duration_decrement();

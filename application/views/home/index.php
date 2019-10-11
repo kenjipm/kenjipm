@@ -26,7 +26,7 @@
 			</div>			 
 		</div>
 	</div>
-	<h3 id="guitar_tab_title"></h3>
+	<h3 id="guitar_tab_title">Write your own tab / chord below!</h3>
 	<div id="guitar_tab_video_embed_html"></div>
-	<pre id="guitar_tab_content"></pre>
+	<pre id="guitar_tab_content" contenteditable="true"></pre>
 </div>
