@@ -7,7 +7,6 @@ function init_element() {
 	bind_btn_autoscroll();
 	bind_btn_publish_tab();
 	bind_btn_publish_tab_modal();
-	bind_enter_key_tab();
 	
 	$('#autoscroll_help').tooltip();
 	$('#guitar_tab_content').fitText(7.5, { maxFontSize: '16' });
@@ -84,15 +83,6 @@ function bind_btn_publish_tab() {
 			}
 		});
 	});
-}
-
-function bind_enter_key_tab() {
-	// $('#guitar_tab_content').on('keydown', function (e) {
-		// if (e.keyCode === 13) {
-			// document.execCommand('insertHTML', false, '<br>');
-			// return false; 
-		// }
-	// });
 }
 
 var scroll_duration_timer;

@@ -48,7 +48,7 @@
 	<h3 id="guitar_tab_title">Write your own tab / chord below!</h3>
 	<div id="guitar_tab_video_embed_html"></div>
 	<pre id="guitar_tab_content" contenteditable="true"></pre>
-	<input type="button" id="btn_publish_tab_modal" value="Publish" class="btn btn-primary" data-toggle="modal" data-target="#publish_tab_modal"/>
+	<input type="button" id="btn_publish_tab_modal" value="Publish" class="btn btn-secondary" data-toggle="modal" data-target="#publish_tab_modal"/>
 </div>
 <div class="modal" tabindex="-1" role="dialog" id="publish_tab_modal">
 	<div class="modal-dialog" role="document">
@@ -78,8 +78,8 @@
 			</div>
 			<div class="modal-footer">
 				<small class="form-text text-muted" id="guitar_tab_publish_status"></small>
-				<input type="button" id="btn_publish_tab" value="Publish" class="btn btn-primary"/>
-				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<input type="button" id="btn_publish_tab" value="Publish" class="btn btn-secondary"/>
+				<button type="button" class="btn btn-text" data-dismiss="modal">Close</button>
 			</div>
 		</div>
 	</div>
