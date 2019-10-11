@@ -54,6 +54,11 @@
 			"<li>You CANNOT edit / delete it.</li>".
 			"<li>It will be available for everyone and I don't responsible for anything happens afterward.</li>".
 		"</ul>".
+		"I may:".
+		"<ul>".
+			"<li>Edit / delete your published content with / without your consent.</li>".
+			"<li>Email your provided email address related to your published content.</li>".
+		"</ul>".
 		"Please contact me if you need further questions / assistance."
 	?></pre>
 	<input type="button" id="btn_publish_tab_modal" value="Publish" class="btn btn-secondary" data-toggle="modal" data-target="#publish_tab_modal"/>
