@@ -5,6 +5,9 @@ $(document).ready(function(e){
 function init_element() {
 	bind_guitar_tab_link();
 	bind_btn_autoscroll();
+	bind_btn_publish_tab();
+	bind_btn_publish_tab_modal();
+	bind_enter_key_tab();
 	
 	$('#autoscroll_help').tooltip();
 	$('#guitar_tab_content').fitText(7.5, { maxFontSize: '16' });
@@ -23,7 +26,7 @@ function bind_guitar_tab_link() {
 		
 		var guitar_tab_id = $(this).attr('item_id');
 		$('#guitar_tab_title').html(ajax_loader);
-		$('#guitar_tab_content, #guitar_tab_video_embed_html, #guitar_tab_control').css('opacity', '0');
+		$('#guitar_tab_content, #guitar_tab_video_embed_html, #guitar_tab_control, #btn_publish_tab_modal').css('opacity', '0');
 		
 		$.ajax({
 			url: 'home/get_guitar_tab_detail/',
@@ -48,6 +51,48 @@ function bind_guitar_tab_link() {
 			}
 		});
 	});
+}
+
+function bind_btn_publish_tab_modal() {
+	$('#btn_publish_tab_modal').on('click', function(e){
+		var scroll_duration = $('#scroll_duration').val();
+		$('#new_guitar_tab_duration').val(scroll_duration);
+	});
+}
+
+function bind_btn_publish_tab() {
+	$('#btn_publish_tab').on('click', function(e){
+		var new_guitar_tab_title = $('#new_guitar_tab_title').val();
+		var new_guitar_tab_duration = $('#new_guitar_tab_duration').val();
+		var guitar_tab_content = $('#guitar_tab_content').html();
+		var captcha_word = $('#captcha_word').val();
+		$.ajax({
+			url: 'home/save_guitar_tab/',
+			method: 'POST',
+			data: {
+				guitar_tab_title: new_guitar_tab_title,
+				guitar_tab_duration: new_guitar_tab_duration,
+				guitar_tab_content: guitar_tab_content,
+				word: captcha_word
+			},
+			success: function(response) {
+				if (response.status == "success") {
+					location.reload();
+				} else {
+					$("#guitar_tab_publish_status").html("Captcha failed");
+				}
+			}
+		});
+	});
+}
+
+function bind_enter_key_tab() {
+	// $('#guitar_tab_content').on('keydown', function (e) {
+		// if (e.keyCode === 13) {
+			// document.execCommand('insertHTML', false, '<br>');
+			// return false; 
+		// }
+	// });
 }
 
 var scroll_duration_timer;

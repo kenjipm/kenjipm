@@ -34,7 +34,7 @@
 	object-fit: cover;
 }
 
-.list-group-item-action {
+.list-group-item-action, .list-group-title-action {
 	cursor: pointer;
 }
 

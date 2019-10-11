@@ -10,6 +10,7 @@ class Guitar_tab_model extends CI_Model {
 	public $content;
 	public $duration;
 	public $video_embed_html;
+	public $is_user_posted;
 	public $is_deleted;
 
 	public function map_from_db($db_object)
@@ -22,9 +23,10 @@ class Guitar_tab_model extends CI_Model {
 		$this->is_deleted = $db_object->is_deleted;
 	}
 	
-	public function find_all()
+	public function find_all($is_user_posted = false)
 	{
-		$query = $this->db->query('SELECT * FROM '.$this->table_name.' WHERE is_deleted = false');
+		$is_user_posted = $is_user_posted ? 'true' : 'false';
+		$query = $this->db->query('SELECT * FROM '.$this->table_name.' WHERE is_user_posted = '.$is_user_posted.' AND is_deleted = false');
 		return $query->result();
 	}
 
@@ -36,5 +38,17 @@ class Guitar_tab_model extends CI_Model {
 		$this->map_from_db($result);
 		
 		return $this;
+	}
+	
+	public function insert_from_post()
+	{
+		$data = array(
+			'title' => $_POST['guitar_tab_title'],
+			'content' => $_POST['guitar_tab_content'],
+			'duration' => $_POST['guitar_tab_duration'],
+			'is_user_posted' => 1
+		);
+
+		$this->db->insert($this->table_name, $data);
 	}
 }

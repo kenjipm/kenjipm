@@ -30,8 +30,28 @@ class Home extends CI_Controller {
 		// body
 		$this->load->model('guitar_tab_model');
 		$guitar_tabs = $this->guitar_tab_model->find_all();
+		$user_posted_guitar_tabs = $this->guitar_tab_model->find_all(true);
+		
+		// captcha
+		$this->load->helper('captcha');
+		$vals = array(
+				'img_path'      => './captcha/',
+				'img_url'       => base_url('captcha')
+		);
+
+		$captcha = create_captcha($vals);
+		$data = array(
+				'captcha_time'  => $captcha['time'],
+				'ip_address'    => $this->input->ip_address(),
+				'word'          => $captcha['word']
+		);
+
+		$query = $this->db->insert_string('captcha', $data);
+		$this->db->query($query);
 		
 		$data_body['guitar_tabs'] = $guitar_tabs;
+		$data_body['user_posted_guitar_tabs'] = $user_posted_guitar_tabs;
+		$data_body['captcha'] = $captcha;
 		$this->load->view('home/index', $data_body);
 		
 		// footer
@@ -53,6 +73,36 @@ class Home extends CI_Controller {
 			$response['status'] = 'failed';
 		}
 		$response['data'] = $guitar_tab;
+		header('Content-Type: application/json');
+		echo json_encode($response);
+	}
+	
+	public function save_guitar_tab()
+	{
+		// First, delete old captchas
+		$expiration = time() - 7200; // Two hour limit
+		$this->db->where('captcha_time < ', $expiration)
+				->delete('captcha');
+
+		// Then see if a captcha exists:
+		$sql = 'SELECT COUNT(*) AS count FROM captcha WHERE word = ? AND ip_address = ? AND captcha_time > ?';
+		$binds = array($_POST['word'], $this->input->ip_address(), $expiration);
+		$query = $this->db->query($sql, $binds);
+		$row = $query->row();
+
+		if ($row->count > 0)
+		{
+			// insert tab to database
+			$this->load->model('guitar_tab_model');
+			$this->guitar_tab_model->insert_from_post();
+			
+			$response['status'] = 'success';
+		}
+		else
+		{
+			$response['status'] = 'failed';
+		}
+		$response['data'] = '';
 		header('Content-Type: application/json');
 		echo json_encode($response);
 	}
